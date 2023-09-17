@@ -8,7 +8,7 @@ module.exports.create = async function (req, res) {
     });
 
     const updateOpt = await Option.findByIdAndUpdate(opt._id, {
-        "add_vote": `http://localhost:3000/api/v1/options/${opt._id}/add_vote`
+        "add_vote": `https://polling-system-mnl2.onrender.com/api/v1/options/${opt._id}/add_vote`
     });
 
     updateOpt.save();
